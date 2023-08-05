@@ -20,9 +20,13 @@
 I really lacked typescript support or type definitions of <a href="https://github.com/elpheria/rpc-websockets" target="_blank" alt="rpc-websockets">rpc-websockets</a>. I kept everything as simple as possible for <strong>best performance</strong> and in principle <strong>stay close to the metal</strong>. Under the hood id-generation for requests is done using <a href="https://github.com/kelektiv/node-uuid" target="_blank" alt="uuid">uuid/v1</a> to provide id uniqueness as an additional feature.
 
 ## Installation
-
+Using npm:
 ```sh
-npm i rpc-websocket-client
+npm i rpc2-websocket-client
+```
+Using CDN （on browsers）
+```html
+<script src="https://cdn.jsdelivr.net/npm/rpc2-websocket-client/dist/rpc-websocket-client.umd.full.js"></script>
 ```
 
 ## Features
@@ -34,7 +38,15 @@ npm i rpc-websocket-client
 
 ## Basic Usage
 ```ts
-import { RpcWebSocketClient } from 'rpc-websocket-client';
+// vite 使用'rpc-websocket-client.umd.full'，解决require is not defined问题
+// import {RpcWebSocketClient} from 'rpc2-websocket-client/dist/rpc-websocket-client.umd.full';
+// vite.config.ts 增加以下配置
+// export default {
+//     optimizeDeps: {
+//         include: ['rpc2-websocket-client/dist/rpc-websocket-client.umd.full']
+//     }
+// };
+import { RpcWebSocketClient } from 'rpc2-websocket-client';
 
 (async () => {
 
