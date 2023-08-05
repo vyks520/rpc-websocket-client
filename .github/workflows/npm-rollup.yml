@@ -30,3 +30,7 @@ jobs:
         tsc --project tsconfig.build.json
         rollup -c rollup.config.ts
         node build/browserify.js
+        npm publish
+      
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
