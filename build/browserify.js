@@ -11,7 +11,7 @@ const inputFile = getFilePath(pkg.main);
 const outputFile = getFilePath(pkg.main).replace(/\.js$/, '.full.js');
 
 const b = browserify(inputFile, {
-    standalone: camelCase(pkg.name)
+    standalone: camelCase(pkg.sourceName)
 });
 
 b.bundle().pipe(fs.createWriteStream(outputFile));

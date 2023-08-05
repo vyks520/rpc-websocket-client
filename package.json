@@ -1,5 +1,6 @@
 {
-    "name": "rpc-websocket-client",
+    "name": "rpc2-websocket-client",
+    "sourceName": "rpc-websocket-client",
     "version": "1.1.4",
     "description": "",
     "keywords": [

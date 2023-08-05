@@ -7,7 +7,7 @@ import json from 'rollup-plugin-json';
 
 const pkg = require('./package.json');
 
-const libraryName = pkg.name;
+const libraryName = pkg.sourceName;
 
 export default {
     input: `src/${libraryName}.ts`,
